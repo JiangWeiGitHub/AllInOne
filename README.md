@@ -59,14 +59,12 @@
         from rest_framework import viewsets
         from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
 
-
         class UserViewSet(viewsets.ModelViewSet):
             """
             API endpoint that allows users to be viewed or edited.
             """
             queryset = User.objects.all().order_by('-date_joined')
             serializer_class = UserSerializer
-        
         
         class GroupViewSet(viewsets.ModelViewSet):
             """
@@ -90,10 +88,22 @@
         # Additionally, we include login URLs for the browsable API.
         urlpatterns = [
             url(r'^', include(router.urls)),
-            url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')) # If you just use curl to test, you can rid of this row
+            url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')) # If you just use curl to test, you can rid of this row.
         ]
 
+- edit settings.py<p>
+`vim tutorial/settings.py`<p>
 
+        INSTALLED_APPS = (
+            ...
+            'rest_framework',
+            'quickstart',
+        )
+        
+        REST_FRAMEWORK = {
+            'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',), # PS: IsAdminUser(have to login) AllowAny(do not need to login) IsAuthenticated(use in jwt)
+            'PAGE_SIZE': 10
+        }
 
 ## deploy django rest framework
 ### deploy django rest framework with model serializer
