@@ -1,4 +1,4 @@
-#### This repository includes something about python & django & rest framework & celery, enjoy ^_^!<p>
+###### This repository includes something about python & django & rest framework & celery, enjoy ^_^!<p>
 
 ## install essential packages<p>
 - install pip<p>
