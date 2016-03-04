@@ -107,9 +107,11 @@
 
 - test<p>
  + run web server<p>
- `python manage.py runserver`
+`../bin/python manage.py runserver`
  + get information<p>
+`curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
  + set information<p>
+`curl -X POST -d username=newname -d email=newname@example.com -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
 
 ## deploy django rest framework
 ### deploy django rest framework with model serializer
