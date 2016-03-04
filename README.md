@@ -106,9 +106,9 @@
         }
 
 - test<p>
-        - run web server
-        - get information
-        - set information
+        + run web server
+        + get information
+        + set information
 
 ## deploy django rest framework
 ### deploy django rest framework with model serializer
