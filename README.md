@@ -38,7 +38,7 @@
 `PS: If you didn't create a superuser, you can not access to django server's background.`<p>
 - create & edit serializers.py<p>
 `vim quickstart/serializers.py`<p>
-`
+>
     
     
 from django.contrib.auth.models import User, Group
