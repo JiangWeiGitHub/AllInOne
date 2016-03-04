@@ -7,7 +7,7 @@
 ## use virtualenv
 `virtualenv env-name-you-point`
 
-** PS: all deployments after depand on virtualenv! **
+**PS: all deployments after depand on virtualenv!**
 
 ## deploy django
 
