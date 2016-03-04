@@ -37,6 +37,7 @@ PS: *all deployments after depand on virtualenv!*<p>
 - add superuser<p>
 `../bin/python manage.py createsuperuser # name: admin & password: password123 & email can be null`<p>
 ##### If you didn't create a superuser, you can not access to django server's background.<p>
+##### From this demo, you can get user's information from restful api.<p>
 
 
 
