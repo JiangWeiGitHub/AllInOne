@@ -4,13 +4,13 @@
 - install virtualenv
 `sudo pip install virtualenv`
 
- *PS: all deployments after depand on virtualenv!*
+ PS: *all deployments after depand on virtualenv!*
 
 ***
 
 ## deploy django
 - use virtualenv
-`virtualenv env-name-you-point`
+`virtualenv env-name-you-point`<p>
 `cd env-name-you-point`
 - install django
 `bin/pip install django`
