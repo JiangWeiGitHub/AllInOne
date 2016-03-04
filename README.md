@@ -1,4 +1,4 @@
-# install essential packages
+## install essential packages
   - install pip
   `sudo apt-get install python-pip`
   - install virtualenv
@@ -23,9 +23,9 @@ cd tutorial
 
 cd ..
 vim tutorial/quickstart/serializers.py
-# deploy django
-# deploy django rest framework
-## deploy django rest framework with model serializer
-## deploy django rest framework with non-model serializer
-# deploy django rest framework jwt
-# deploy django rest framework with celery
+## deploy django
+## deploy django rest framework
+### deploy django rest framework with model serializer
+### deploy django rest framework with non-model serializer
+## deploy django rest framework jwt
+## deploy django rest framework with celery
