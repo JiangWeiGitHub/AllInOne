@@ -6,7 +6,7 @@
 - install virtualenv<p>
 `sudo pip install virtualenv`<p>
 
-PS: *all deployments after depand on virtualenv!*<p>
+`PS: *all deployments after depand on virtualenv!*`<p>
 
 ***
 
@@ -39,7 +39,8 @@ PS: *all deployments after depand on virtualenv!*<p>
 `PS: If you didn't create a superuser, you can not access to django server's background.`<p>
 - create & edit serializers.py<p>
 `vim quickstart/serializers.py`<p>
-`from django.contrib.auth.models import User, Group
+`
+from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 
 
@@ -52,7 +53,8 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
-        fields = ('url', 'name')`
+        fields = ('url', 'name')
+`
 
 
 
