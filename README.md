@@ -1,4 +1,4 @@
-## this repository includes something about python & django & rest framework & celery, enjoy ^_^!<p>
+#### This repository includes something about python & django & rest framework & celery, enjoy ^_^!<p>
 
 ## install essential packages<p>
 - install pip<p>
@@ -8,7 +8,7 @@
 
 PS: *all deployments after depand on virtualenv!*<p>
 
-***<p>
+***
 
 ## deploy all in one enviroment<p>
 - use virtualenv<p>
@@ -22,12 +22,19 @@ PS: *all deployments after depand on virtualenv!*<p>
 - install pygments<p>
 `bin/pip install pygments # We'll be using this for the code highlighting`<p>
 
-***<p>
+***
 
 ## hello world with django rest framework<p>
-bin/django-admin.py startproject tutorial<p>
-cd tutorial<p>
-../bin/django-admin.py startapp quickstart<p>
+- create a django project named tutorial<p>
+`bin/django-admin.py startproject tutorial`<p>
+- go into tutorial folder<p>
+`cd tutorial`<p>
+- create a django app named quickstart<p>
+`../bin/django-admin.py startapp quickstart`<p>
+- synchronize database<p>
+`../bin/python manage.py migrate`<p>
+- add superuser<p>
+`../bin/python manage.py createsuperuser # name: admin & password: password123 & email can be null`<p>
 
 
 
