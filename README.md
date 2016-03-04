@@ -4,16 +4,21 @@
 - install virtualenv<p>
 `sudo pip install virtualenv`
 
- PS: *all deployments after depand on virtualenv!*
+PS: *all deployments after depand on virtualenv!*
 
 ***
 
-## deploy django
+## deploy all in one enviroment
 - use virtualenv<p>
+`cd anywhere-you-want`<p>
 `virtualenv env-name-you-point`<p>
 `cd env-name-you-point`<p>
 - install django<p>
 `bin/pip install django`<p>
+- install django rest framework<p>
+`bin/pip install djangorestframework`<p>
+- install pygments<p>
+`bin/pip install pygments # We'll be using this for the code highlighting`<p>
 
 
 
@@ -23,9 +28,7 @@
 
 
 
-
-bin/pip install djangorestframework
-bin/pip install pygments  # We'll be using this for the code highlighting
+ 
 
 bin/django-admin.py startproject tutorial
 cd tutorial
