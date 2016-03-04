@@ -52,15 +52,48 @@
                 model = Group
                fields = ('url', 'name')
 
-bin/django-admin.py startproject tutorial
-cd tutorial
-../bin/django-admin.py startapp quickstart
+- edit views.py<p>
+`vim quickstart/views.py`<p>
 
-../bin/python manage.py migrate #sync database
-../bin/python manage.py createsuperuser #备注：用户名admin 密码password123
+        from django.contrib.auth.models import User, Group
+        from rest_framework import viewsets
+        from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
 
-cd ..
-vim tutorial/quickstart/serializers.py
+
+        class UserViewSet(viewsets.ModelViewSet):
+            """
+            API endpoint that allows users to be viewed or edited.
+            """
+            queryset = User.objects.all().order_by('-date_joined')
+            serializer_class = UserSerializer
+        
+        
+        class GroupViewSet(viewsets.ModelViewSet):
+            """
+            API endpoint that allows groups to be viewed or edited.
+            """
+            queryset = Group.objects.all()
+            serializer_class = GroupSerializer
+
+- edit urls.py<p>
+`vim tutorial/urls.py`<p>
+
+        from django.conf.urls import url, include
+        from rest_framework import routers
+        from tutorial.quickstart import views
+        
+        router = routers.DefaultRouter()
+        router.register(r'users', views.UserViewSet)
+        router.register(r'groups', views.GroupViewSet)
+        
+        # Wire up our API using automatic URL routing.
+        # Additionally, we include login URLs for the browsable API.
+        urlpatterns = [
+            url(r'^', include(router.urls)),
+            url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')) # If you just use curl to test, you can rid of this row
+        ]
+
+
 
 ## deploy django rest framework
 ### deploy django rest framework with model serializer
