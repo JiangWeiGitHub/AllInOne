@@ -37,7 +37,7 @@
 `../bin/python manage.py migrate`<p>
 - add superuser<p>
 `../bin/python manage.py createsuperuser # name: admin & password: password123 & email can be null`<p>
-`PS: If you didn't create a superuser, you can not access to django server's background.`<p>
+`PS: If you didn't create a superuser, you could not access to django server's background.`<p>
 - create & edit serializers.py<p>
 `vim quickstart/serializers.py`<p>
 
@@ -90,7 +90,7 @@
         # Additionally, we include login URLs for the browsable API.
         urlpatterns = [
             url(r'^', include(router.urls)),
-            url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')) # If you just use curl to test, you can rid of this row.
+            url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')) # If you only use curl to test, you can rid of this row.
         ]
 
 - edit settings.py<p>
