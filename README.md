@@ -25,7 +25,7 @@
 
 ***
 
-### hello world with django rest framework<p>
+### hello world with django rest framework (use models)<p>
 ###### From this demo, you can get user's information from restful api.<p>
 - create a django project named tutorial<p>
 `bin/django-admin.py startproject tutorial`<p>
@@ -117,7 +117,7 @@
 
 ### hello world with django rest framework jwt<p>
 ###### From this demo, you can get user's information from restful api with token.<p>
-###### Pre-Condition: you've already done with "hello world with django rest framework".<p>
+###### Pre-Condition: you've already done with "hello world with django rest framework (use models)".<p>
 - edit settings.py<p>
 `vim tutorial/settings.py`<p>
 
@@ -149,8 +149,9 @@
  + get information with token<p>
 `curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiIiLCJleHAiOjE0NTY5MDIwMjN9.HtqDs4FY322WXK6FeRUsyZGeDc-OMMpTIjQiLiKG9zw" http://localhost:8000/`
 
+### hello world with django rest framework (non-models)<p>
+###### From this demo, you can get user's information from restful api with token.<p>
+###### Pre-Condition: you've already done with "hello world with django rest framework (use models)".<p>
 
-#### deploy django rest framework with model serializer
-#### deploy django rest framework with non-model serializer
-### deploy django rest framework jwt
+
 ### deploy django rest framework with celery
