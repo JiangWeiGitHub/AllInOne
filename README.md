@@ -20,6 +20,8 @@
 `bin/pip install djangorestframework`<p>
 - install pygments<p>
 `bin/pip install pygments # We'll be using this for the code highlighting`<p>
+- install django rest framework jwt<p>
+`bin/pip  install djangorestframework-jwt`<p>
 
 ***
 
@@ -113,8 +115,13 @@
  + set information<p>
 `curl -X POST -d username=newname -d email=newname@example.com -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
 
-## deploy django rest framework
-### deploy django rest framework with model serializer
-### deploy django rest framework with non-model serializer
-## deploy django rest framework jwt
-## deploy django rest framework with celery
+### hello world with django rest framework jwt<p>
+###### From this demo, you can get user's information from restful api with token.<p>
+###### Pre-Condition: you've already done with "hello world with django rest framework".<p>
+
+
+
+#### deploy django rest framework with model serializer
+#### deploy django rest framework with non-model serializer
+### deploy django rest framework jwt
+### deploy django rest framework with celery
