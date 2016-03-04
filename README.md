@@ -105,6 +105,11 @@
             'PAGE_SIZE': 10
         }
 
+- test<p>
+        - run web server
+        - get information
+        - set information
+
 ## deploy django rest framework
 ### deploy django rest framework with model serializer
 ### deploy django rest framework with non-model serializer
