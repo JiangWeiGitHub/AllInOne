@@ -25,6 +25,7 @@ PS: *all deployments after depand on virtualenv!*<p>
 ***
 
 ## hello world with django rest framework<p>
+##### From this demo, you can get user's information from restful api.<p>
 - create a django project named tutorial<p>
 `bin/django-admin.py startproject tutorial`<p>
 - go into tutorial folder<p>
@@ -35,6 +36,7 @@ PS: *all deployments after depand on virtualenv!*<p>
 `../bin/python manage.py migrate`<p>
 - add superuser<p>
 `../bin/python manage.py createsuperuser # name: admin & password: password123 & email can be null`<p>
+##### If you didn't create a superuser, you can not access to django server's background. <p>
 
 
 
