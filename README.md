@@ -5,8 +5,7 @@
 `sudo apt-get install python-pip`<p>
 - install virtualenv<p>
 `sudo pip install virtualenv`<p>
-
-`PS: *all deployments after depand on virtualenv!*`<p>
+`PS: all deployments after depand on virtualenv!`<p>
 
 ***
 
@@ -40,6 +39,8 @@
 - create & edit serializers.py<p>
 `vim quickstart/serializers.py`<p>
 `
+    
+    
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 
@@ -54,6 +55,8 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ('url', 'name')
+    
+        
 `
 
 
