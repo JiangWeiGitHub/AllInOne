@@ -118,7 +118,36 @@
 ### hello world with django rest framework jwt<p>
 ###### From this demo, you can get user's information from restful api with token.<p>
 ###### Pre-Condition: you've already done with "hello world with django rest framework".<p>
+- edit settings.py<p>
+`vim tutorial/settings.py`<p>
 
+        REST_FRAMEWORK = {
+            'DEFAULT_PERMISSION_CLASSES': (
+                'rest_framework.permissions.IsAuthenticated',
+            ),
+            'DEFAULT_AUTHENTICATION_CLASSES': (
+                'rest_framework.authentication.SessionAuthentication',
+                'rest_framework.authentication.BasicAuthentication',
+                'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+            ),
+        }
+
+- edit urls.py<p>
+`vim tutorial/urls.py`<p>
+
+        urlpatterns = patterns(
+            '',
+            # ...
+            url(r'^api-token-auth/', 'rest_framework_jwt.views.obtain_jwt_token'),
+        )
+
+- test<p>
+ + run web server<p>
+`../bin/python manage.py runserver`
+ + get token<p>
+`curl -X POST -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}' http://localhost:8000/api-token-auth/`
+ + get information with token<p>
+`curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiIiLCJleHAiOjE0NTY5MDIwMjN9.HtqDs4FY322WXK6FeRUsyZGeDc-OMMpTIjQiLiKG9zw" http://localhost:8000/`
 
 
 #### deploy django rest framework with model serializer
