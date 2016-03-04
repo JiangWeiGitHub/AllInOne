@@ -1,8 +1,8 @@
 # install essential packages
-- install pip
-' sudo apt-get install python-pip '
-- install virtualenv
-' sudo pip install virtualenv '
+  - install pip
+  `sudo apt-get install python-pip`
+  - install virtualenv
+  `sudo pip install virtualenv`
 
 
 
