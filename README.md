@@ -36,10 +36,24 @@ PS: *all deployments after depand on virtualenv!*<p>
 `../bin/python manage.py migrate`<p>
 - add superuser<p>
 `../bin/python manage.py createsuperuser # name: admin & password: password123 & email can be null`<p>
-
-###### If you didn't create a superuser, you can not access to django server's background.<p>
-
-
+`PS: If you didn't create a superuser, you can not access to django server's background.`<p>
+- create & edit serializers.py<p>
+`vim quickstart/serializers.py`<p>
+`from django.contrib.auth.models import User, Group`
+`from rest_framework import serializers`
+``
+``
+`class UserSerializer(serializers.HyperlinkedModelSerializer):`
+`    class Meta:`
+`        model = User`
+`        fields = ('url', 'username', 'email', 'groups')`
+``
+``
+`class GroupSerializer(serializers.HyperlinkedModelSerializer):`
+`    class Meta:`
+`        model = Group`
+`        fields = ('url', 'name')`
+``
 
 
 
