@@ -107,7 +107,7 @@
 
 - test<p>
  + run web server
- 'python manage.py runserver'
+ `python manage.py runserver`
  + get information
  + set information
 
