@@ -35,7 +35,8 @@ PS: *all deployments after depand on virtualenv!*<p>
 - synchronize database<p>
 `../bin/python manage.py migrate`<p>
 - add superuser<p>
-`../bin/python manage.py createsuperuser # name: admin & password: password123 & email can be null`<p><p>
+`../bin/python manage.py createsuperuser # name: admin & password: password123 & email can be null`<p>
+
 ###### If you didn't create a superuser, you can not access to django server's background.<p>
 
 
