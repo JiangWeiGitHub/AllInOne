@@ -1,7 +1,7 @@
 ## install essential packages
-- install pip
+- install pip<p>
 `sudo apt-get install python-pip`
-- install virtualenv
+- install virtualenv<p>
 `sudo pip install virtualenv`
 
  PS: *all deployments after depand on virtualenv!*
@@ -9,11 +9,11 @@
 ***
 
 ## deploy django
-- use virtualenv
+- use virtualenv<p>
 `virtualenv env-name-you-point`<p>
-`cd env-name-you-point`
-- install django
-`bin/pip install django`
+`cd env-name-you-point`<p>
+- install django<p>
+`bin/pip install django`<p>
 
 
 
