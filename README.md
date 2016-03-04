@@ -1,14 +1,16 @@
-## install essential packages
+## this repository includes something about python & django & rest framework & celery, enjoy ^_^!<p>
+
+## install essential packages<p>
 - install pip<p>
-`sudo apt-get install python-pip`
+`sudo apt-get install python-pip`<p>
 - install virtualenv<p>
-`sudo pip install virtualenv`
+`sudo pip install virtualenv`<p>
 
-PS: *all deployments after depand on virtualenv!*
+PS: *all deployments after depand on virtualenv!*<p>
 
-***
+***<p>
 
-## deploy all in one enviroment
+## deploy all in one enviroment<p>
 - use virtualenv<p>
 `cd anywhere-you-want`<p>
 `virtualenv env-name-you-point`<p>
@@ -20,7 +22,12 @@ PS: *all deployments after depand on virtualenv!*
 - install pygments<p>
 `bin/pip install pygments # We'll be using this for the code highlighting`<p>
 
+***<p>
 
+## hello world with django rest framework<p>
+bin/django-admin.py startproject tutorial<p>
+cd tutorial<p>
+../bin/django-admin.py startapp quickstart<p>
 
 
 
