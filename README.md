@@ -4,7 +4,12 @@
 - install virtualenv
 `sudo pip install virtualenv`
 
+## use virtualenv
+`virtualenv env-name-you-point`
 
+** PS: all deployments after depand on virtualenv! **
+
+## deploy django
 
 virtualenv env
 
@@ -23,7 +28,7 @@ cd tutorial
 
 cd ..
 vim tutorial/quickstart/serializers.py
-## deploy django
+
 ## deploy django rest framework
 ### deploy django rest framework with model serializer
 ### deploy django rest framework with non-model serializer
