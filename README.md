@@ -1,6 +1,6 @@
 ###### This repository includes something about python & django & rest framework & celery, enjoy ^_^!<p>
 
-## install essential packages<p>
+### install essential packages<p>
 - install pip<p>
 `sudo apt-get install python-pip`<p>
 - install virtualenv<p>
@@ -10,7 +10,7 @@ PS: *all deployments after depand on virtualenv!*<p>
 
 ***
 
-## deploy all in one enviroment<p>
+### deploy all in one enviroment<p>
 - use virtualenv<p>
 `cd anywhere-you-want`<p>
 `virtualenv env-name-you-point`<p>
@@ -24,7 +24,7 @@ PS: *all deployments after depand on virtualenv!*<p>
 
 ***
 
-## hello world with django rest framework<p>
+### hello world with django rest framework<p>
 ##### From this demo, you can get user's information from restful api.<p>
 - create a django project named tutorial<p>
 `bin/django-admin.py startproject tutorial`<p>
@@ -36,7 +36,7 @@ PS: *all deployments after depand on virtualenv!*<p>
 `../bin/python manage.py migrate`<p>
 - add superuser<p>
 `../bin/python manage.py createsuperuser # name: admin & password: password123 & email can be null`<p>
-##### If you didn't create a superuser, you can not access to django server's background. <p>
+##### If you didn't create a superuser, you can not access to django server's background.<p>
 
 
 
