@@ -106,10 +106,10 @@
         }
 
 - test<p>
- + run web server
+ + run web server<p>
  `python manage.py runserver`
- + get information
- + set information
+ + get information<p>
+ + set information<p>
 
 ## deploy django rest framework
 ### deploy django rest framework with model serializer
