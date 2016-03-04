@@ -4,7 +4,7 @@
 - install virtualenv
 `sudo pip install virtualenv`
 
-*PS: all deployments after depand on virtualenv!*
+  *PS: all deployments after depand on virtualenv!*
 
 ## use virtualenv
 `virtualenv env-name-you-point`
