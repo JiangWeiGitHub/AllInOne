@@ -52,14 +52,14 @@
         class GroupSerializer(serializers.HyperlinkedModelSerializer):
             class Meta:
                 model = Group
-               fields = ('url', 'name')
+                fields = ('url', 'name')
 
 - edit views.py<p>
 `vim quickstart/views.py`<p>
 
         from django.contrib.auth.models import User, Group
         from rest_framework import viewsets
-        from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
+        from quickstart.serializers import UserSerializer, GroupSerializer
 
         class UserViewSet(viewsets.ModelViewSet):
             """
@@ -80,7 +80,7 @@
 
         from django.conf.urls import url, include
         from rest_framework import routers
-        from tutorial.quickstart import views
+        from quickstart import views
         
         router = routers.DefaultRouter()
         router.register(r'users', views.UserViewSet)
