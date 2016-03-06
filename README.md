@@ -115,15 +115,15 @@
  + result<p>
 
         {
-            "count": 1,
-            "next": null,
-            "previous": null,
-            "results": [
+            \"count\": 1,
+            \"next\": null,
+            \"previous\": null,
+            \"results\": [
                 {
-                    "url": "http://127.0.0.1:8000/users/1/",
-                    "username": "admin",
-                    "email": "admin@admin.com",
-                    "groups": []
+                    \"url\": \"http://127.0.0.1:8000/users/1/\",
+                    \"username\": \"admin\",
+                    \"email\": \"admin@admin.com\",
+                    \"groups\": []
                 }
             ]
         }
