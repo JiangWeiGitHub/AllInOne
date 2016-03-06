@@ -112,8 +112,43 @@
 `../bin/python manage.py runserver`
  + get information<p>
 `curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
+ + result<p>
+        {
+            "count": 1,
+            "next": null,
+            "previous": null,
+            "results": [
+                {
+                    "url": "http://127.0.0.1:8000/users/1/",
+                    "username": "admin",
+                    "email": "admin@admin.com",
+                    "groups": []
+                }
+            ]
+        }
+
  + set information<p>
 `curl -X POST -d username=newname -d email=newname@example.com -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
+ + result<p>
+        {
+            "count": 2,
+            "next": null,
+            "previous": null,
+            "results": [
+                {
+                    "url": "http://127.0.0.1:8000/users/2/",
+                    "username": "newname",
+                    "email": "newname@example.com",
+                    "groups": []
+                },
+                {
+                    "url": "http://127.0.0.1:8000/users/1/",
+                    "username": "admin",
+                    "email": "admin@admin.com",
+                    "groups": []
+                }
+            ]
+        }
 
 ### hello world with django rest framework jwt<p>
 ###### From this demo, you can get user's information from restful api with token.<p>
