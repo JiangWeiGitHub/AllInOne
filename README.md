@@ -119,12 +119,7 @@
             "next": null,
             "previous": null,
             "results": [
-                {
-                    "url": "http://127.0.0.1:8000/users/1/",
-                    "username": "admin",
-                    "email": "admin@admin.com",
-                    "groups": []
-                }
+
             ]
         }
 
