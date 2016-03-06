@@ -114,7 +114,19 @@
 `curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
  + result<p>
 
-
+        {
+            "count": 1,
+            "next": null,
+            "previous": null,
+            "results": [
+                {
+                    "url": "http://127.0.0.1:8000/users/1/",
+                    "username": "admin",
+                    "email": "admin@admin.com",
+                    "groups": []
+                }
+            ]
+        }
 
  + set information<p>
 `curl -X POST -d username=newname -d email=newname@example.com -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
