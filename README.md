@@ -110,15 +110,15 @@
 
 - test<p>
  + run web server<p>
-`../bin/python manage.py runserver`
+`../bin/python manage.py runserver`<p>
  + get information<p>
-`curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
+`curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`<p>
  + result<p>
- `{ "count": 1, "next": null, "previous": null, "results": [ { "url": "http://127.0.0.1:8000/users/1/", "username": "admin", "email": "admin@admin.com", "groups": [] } ] }`
+ `{ "count": 1, "next": null, "previous": null, "results": [ { "url": "http://127.0.0.1:8000/users/1/", "username": "admin", "email": "admin@admin.com", "groups": [] } ] }`<p>
  + set information<p>
-`curl -X POST -d username=newname -d email=newname@example.com -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
+`curl -X POST -d username=newname -d email=newname@example.com -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`<p>
  + result<p>
- `{ "count": 2, "next": null, "previous": null, "results": [ { "url": "http://127.0.0.1:8000/users/2/", "username": "newname", "email": "newname@example.com", "groups": [] }, { "url": "http://127.0.0.1:8000/users/1/", "username": "admin", "email": "admin@admin.com", "groups": [] } ] }`
+ `{ "count": 2, "next": null, "previous": null, "results": [ { "url": "http://127.0.0.1:8000/users/2/", "username": "newname", "email": "newname@example.com", "groups": [] }, { "url": "http://127.0.0.1:8000/users/1/", "username": "admin", "email": "admin@admin.com", "groups": [] } ] }`<p>
 
 ### hello world with django rest framework jwt<p>
 ###### From this demo, you can get user's information from restful api with token.<p>
@@ -152,15 +152,15 @@
 
 - test<p>
  + run web server<p>
- `../bin/python manage.py runserver`
+ `../bin/python manage.py runserver`<p>
  + get token<p>
- `curl -X POST -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}' http://localhost:8000/api-token-auth/`
+ `curl -X POST -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}' http://localhost:8000/api-token-auth/`<p>
  + result<p>
  `{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE0NTczMTYzMjF9.E-0yM5UkAHxUaXM6LIimSM-33TJP0z4y-XMqDTY03lI"}`<p>
  + get information with token<p>
- `curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE0NTczMTYzMjF9.E-0yM5UkAHxUaXM6LIimSM-33TJP0z4y-XMqDTY03lI" http://localhost:8000/users/`
+ `curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE0NTczMTYzMjF9.E-0yM5UkAHxUaXM6LIimSM-33TJP0z4y-XMqDTY03lI" http://localhost:8000/users/`<p>
  + result<p>
- `[{"url":"http://localhost:8000/users/2/","username":"newname","email":"newname@example.com","groups":[]},{"url":"http://localhost:8000/users/1/","username":"admin","email":"admin@admin.com","groups":[]}]`
+ `[{"url":"http://localhost:8000/users/2/","username":"newname","email":"newname@example.com","groups":[]},{"url":"http://localhost:8000/users/1/","username":"admin","email":"admin@admin.com","groups":[]}]`<p>
 
 ### hello world with django rest framework (non-models)<p>
 ###### From this demo, you can get user's information from restful api without "models" method.<p>
@@ -171,7 +171,7 @@
 `cd tutorial-none-models`<p>
 - create a new app<p>
 `../bin/django-admin startapp calculation`<p>
-`Ps: if error occurs like "bad interpreter: No such file or directory", that means the enviroment you use is not fit the git's repository well, so you have to go into "env/bin" folder and type "django-admin startapp calculation", then type "mv calculation ../tutorial-none-models", finally go back "tutorial-none-models" folder`<p>
+`Ps: If error occurs like "bad interpreter: No such file or directory", that means the enviroment you used is not fit the repository well, so you have to use another way to create this app, just like go into "env/bin" folder and type "django-admin startapp calculation", then type "mv calculation ../tutorial-none-models", finally go back "tutorial-none-models" folder!`<p>
 - create & edit cal.py<p>
 `vim vim calculation/cal.py`<p>
 
@@ -226,21 +226,10 @@
 
 - test<p>
  + run web server<p>
- `../bin/python manage.py runserver`
+ `../bin/python manage.py runserver`<p>
  + get information<p>
- `curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/hahaha/`
+ `curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/hahaha/`<p>
  + result<p>
-        [
-            [
-                1,
-                2,
-                3
-            ],
-            [
-                4,
-                5,
-                6
-            ]
-        ]
+ `[ [ 1, 2, 3 ], [ 4, 5, 6 ] ]`<p>
 
 ### deploy django rest framework with celery
