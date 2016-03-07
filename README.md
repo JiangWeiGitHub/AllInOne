@@ -155,9 +155,9 @@
  + get token<p>
  `curl -X POST -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}' http://localhost:8000/api-token-auth/`
  + result<p>
- `{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE0NTczMTUzNTV9.zrvohakc4g5sP688yR-Njzl1aaeiqoqaslwgaVc-LFA"}`<p>
+ `{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE0NTczMTYzMjF9.E-0yM5UkAHxUaXM6LIimSM-33TJP0z4y-XMqDTY03lI"}`<p>
  + get information with token<p>
- `curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiIiLCJleHAiOjE0NTY5MDIwMjN9.HtqDs4FY322WXK6FeRUsyZGeDc-OMMpTIjQiLiKG9zw" http://localhost:8000/users/`
+ `curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE0NTczMTYzMjF9.E-0yM5UkAHxUaXM6LIimSM-33TJP0z4y-XMqDTY03lI" http://localhost:8000/users/`
  + result<p>
  `[{"url":"http://localhost:8000/users/2/","username":"newname","email":"newname@example.com","groups":[]},{"url":"http://localhost:8000/users/1/","username":"admin","email":"admin@admin.com","groups":[]}]`
   
