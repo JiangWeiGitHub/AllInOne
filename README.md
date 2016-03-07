@@ -6,6 +6,7 @@
 - install virtualenv<p>
 `sudo pip install virtualenv`<p>
 `PS: all deployments after depand on virtualenv!`<p>
+`Caveat: virtualenv can not relocate some configuration files well, and the environment it has made is not relocatable well either, so using this repository's environment directly is not recommended!`<p>
 
 ***
 
