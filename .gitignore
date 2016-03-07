@@ -1,1 +1,10 @@
 *.pyc
+/bin
+/bin/*
+/include
+/include/*
+/lib
+/lib/*
+/local
+/local/*
+pip-selfcheck.json
