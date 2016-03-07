@@ -112,45 +112,12 @@
 `../bin/python manage.py runserver`
  + get information<p>
 `curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
-  * result<p>
-
-        {
-            "count": 1,
-            "next": null,
-            "previous": null,
-            "results": [
-                {
-                    "url": "http://127.0.0.1:8000/users/1/",
-                    "username": "admin",
-                    "email": "admin@admin.com",
-                    "groups": []
-                }
-            ]
-        }
-
+ + result<p>
+ `{ "count": 1, "next": null, "previous": null, "results": [ { "url": "http://127.0.0.1:8000/users/1/", "username": "admin", "email": "admin@admin.com", "groups": [] } ] }`
  + set information<p>
 `curl -X POST -d username=newname -d email=newname@example.com -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/`
-  * result<p>
-
-        {
-            "count": 2,
-            "next": null,
-            "previous": null,
-            "results": [
-                {
-                    "url": "http://127.0.0.1:8000/users/2/",
-                    "username": "newname",
-                    "email": "newname@example.com",
-                    "groups": []
-                },
-                {
-                    "url": "http://127.0.0.1:8000/users/1/",
-                    "username": "admin",
-                    "email": "admin@admin.com",
-                    "groups": []
-                }
-            ]
-        }
+ + result<p>
+ `{ "count": 2, "next": null, "previous": null, "results": [ { "url": "http://127.0.0.1:8000/users/2/", "username": "newname", "email": "newname@example.com", "groups": [] }, { "url": "http://127.0.0.1:8000/users/1/", "username": "admin", "email": "admin@admin.com", "groups": [] } ] }`
 
 ### hello world with django rest framework jwt<p>
 ###### From this demo, you can get user's information from restful api with token.<p>
@@ -187,12 +154,12 @@
  `../bin/python manage.py runserver`
  + get token<p>
  `curl -X POST -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}' http://localhost:8000/api-token-auth/`
-  * result
-  `{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE0NTczMTUzNTV9.zrvohakc4g5sP688yR-Njzl1aaeiqoqaslwgaVc-LFA"}`<p>
+ + result<p>
+ `{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE0NTczMTUzNTV9.zrvohakc4g5sP688yR-Njzl1aaeiqoqaslwgaVc-LFA"}`<p>
  + get information with token<p>
  `curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiIiLCJleHAiOjE0NTY5MDIwMjN9.HtqDs4FY322WXK6FeRUsyZGeDc-OMMpTIjQiLiKG9zw" http://localhost:8000/users/`
-  * result
-  `[{"url":"http://localhost:8000/users/2/","username":"newname","email":"newname@example.com","groups":[]},{"url":"http://localhost:8000/users/1/","username":"admin","email":"admin@admin.com","groups":[]}]`
+ + result<p>
+ `[{"url":"http://localhost:8000/users/2/","username":"newname","email":"newname@example.com","groups":[]},{"url":"http://localhost:8000/users/1/","username":"admin","email":"admin@admin.com","groups":[]}]`
   
 
 ### hello world with django rest framework (non-models)<p>
