@@ -1,4 +1,4 @@
-###### This repository includes something about python & django & rest framework & celery, enjoy ^_^!<p>
+###### This repository includes something about python & django & rest framework, enjoy ^_^!<p>
 
 ### install essential packages<p>
 - install pip<p>
@@ -231,5 +231,3 @@
  `curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/hahaha/`<p>
  + result<p>
  `[ [ 1, 2, 3 ], [ 4, 5, 6 ] ]`<p>
-
-### deploy django rest framework with celery
